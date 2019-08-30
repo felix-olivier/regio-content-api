@@ -105,13 +105,13 @@ CMD ["php-fpm"]
 
 # "nginx" stage
 # depends on the "php" stage above
-FROM nginx:${NGINX_VERSION}-alpine AS api_platform_nginx
-
-COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
-
-WORKDIR /srv/api
-
-COPY --from=api_platform_php /srv/api/public public/
+#FROM nginx:${NGINX_VERSION}-alpine AS api_platform_nginx
+#
+#COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+#
+#WORKDIR /srv/api
+#
+#COPY --from=api_platform_php /srv/api/public public/
 
 
 
